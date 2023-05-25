@@ -6,13 +6,14 @@ import sys
 import time
 
 from PIL import Image
-from waveshare_epd import epd7in5_V2
 
 assets_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'assets')
 hardware_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'hardware')
 
 if os.path.exists(hardware_dir):
     sys.path.append(hardware_dir)
+    
+from waveshare_epd import epd7in5_V2
 
 logging.basicConfig(level=logging.INFO)
 
