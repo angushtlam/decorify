@@ -15,7 +15,7 @@ setup(
     name='waveshare-epd',
     description='Waveshare e-Paper Display',
     author='Waveshare',
-    package_dir={'': 'lib'},
+    package_dir={'': 'hardware'},
     packages=['waveshare_epd'],
     install_requires=dependencies,
 )

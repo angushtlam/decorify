@@ -9,14 +9,18 @@ from PIL import Image
 from waveshare_epd import epd7in5_V2
 
 assets_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'assets')
-libdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'lib')
+hardware_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'hardware')
 
-if os.path.exists(libdir):
-    sys.path.append(libdir)
+if os.path.exists(hardware_dir):
+    sys.path.append(hardware_dir)
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 
-filenames = ['alvvays_blue_rev.bmp']
+filenames = [
+    'alvvays_antisocialites.jpg',
+    'ethel_cain_preachers_daughter.jpg',
+    'phoebe_bridgers_punisher.jpg'
+]
 
 try:
     epd = epd7in5_V2.EPD()
