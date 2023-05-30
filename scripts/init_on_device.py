@@ -1,30 +1,46 @@
 #!/usr/bin/python
 import os
 import sys
-from PIL import ImageTk
+import time
 import tkinter as tk
+
+from PIL import ImageTk
 
 # Append library files the system path so this file can import those files.
 src_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 sys.path.append(src_dir)
 
-from decorify import decorify
+from decorify import Decorify
 
+
+# Create a Decorify state machine
+decorify_obj = Decorify()
 
 # Create a new Tkinter window.
 window = tk.Tk()
 
-# Load the image.
-assets_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'assets')
-image = decorify.get_image()
+print("Ctrl+C to kill process.")
 
-# Create a `PhotoImage` object from the image.
-photo_image = ImageTk.PhotoImage(image)
+while True:
+    # Load the image
+    image = decorify_obj.get_image()
 
-# Create a `Label` widget and set its `image` property to the `PhotoImage` object.
-label = tk.Label(window, image=photo_image)
-label.image = photo_image
-label.pack()
+    # Create a `PhotoImage` object from the image.
+    photo_image = ImageTk.PhotoImage(image)
 
-# Start the Tkinter main loop.
-window.mainloop()
+    # Create a `Label` widget and set its `image` property to the `PhotoImage` object.
+    label = tk.Label(window, image=photo_image)
+    label.image = photo_image
+    label.pack()
+
+    # Render to the display
+    window.update()
+
+    # Take a break
+    time.sleep(10)
+
+    # Destroy the current image
+    label.destroy()
+
+    # Display the next image
+    decorify_obj.next_image()
