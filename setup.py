@@ -9,9 +9,9 @@ setup(
 )
 
 setup(
-    name='decorify',
-    description='Home decor with customizable display',
+    name='decorify_client',
+    description='On device client for home decor with customizable display',
     author='Angus Lam <me@anguslam.com>',
-    packages=['decorify'],
+    packages=['decorify_device'],
     install_requires=['Pillow'],
 )

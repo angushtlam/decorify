@@ -12,7 +12,7 @@ filenames = [
 ]
 
 
-class Decorify:
+class DecorifyClient:
     def __init__(self) -> None:
         self.index = 0
 

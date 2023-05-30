@@ -10,11 +10,11 @@ from PIL import ImageTk
 src_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 sys.path.append(src_dir)
 
-from decorify import Decorify
+from decorify_device import DecorifyClient
 
 
-# Create a Decorify state machine
-decorify_obj = Decorify()
+# Create a DecorifyClient state machine
+decorify_obj = DecorifyClient()
 
 # Create a new Tkinter window.
 window = tk.Tk()

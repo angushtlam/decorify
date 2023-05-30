@@ -9,14 +9,14 @@ import time
 # Append library files the system path so this file can import those files.
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))))
 
-from decorify import Decorify
+from decorify_device import DecorifyClient
 from waveshare_epd import epd7in5_V2
 
 
 logging.basicConfig(level=logging.INFO)
 
-# Create a Decorify state machine
-decorify_obj = Decorify()
+# Create a DecorifyClient state machine
+decorify_obj = DecorifyClient()
 
 try:
     epd = epd7in5_V2.EPD()
