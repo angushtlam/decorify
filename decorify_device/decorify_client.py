@@ -7,8 +7,12 @@ assets_dir = os.path.join(os.path.dirname(
 
 filenames = [
     'alvvays_antisocialites.jpg',
+    'conan_gray_superache.jpg',
     'ethel_cain_preachers_daughter.jpg',
+    'lana_del_rey_ultraviolence.jpg',
+    'men_i_trust_oncle_jazz.jpg',
     'phoebe_bridgers_punisher.jpg'
+    'the_weeknd_dawn_fm.jpg'
 ]
 
 

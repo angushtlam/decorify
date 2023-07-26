@@ -28,7 +28,7 @@ try:
     while True:
         img_to_render = decorify_obj.get_image()
         epd.display(epd.getbuffer(img_to_render))
-        time.sleep(10)
+        time.sleep(60 * 5)
 
         # Display the next image
         decorify_obj.next_image()    
